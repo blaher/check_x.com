@@ -3,6 +3,7 @@ $email_address = "user@domain.com";
 
 echo "Starting script...\n";
 
+echo "Checking x.com";
 while (file_get_contents("http://x.com") === "x") {
   echo ".";
 
