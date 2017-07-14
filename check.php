@@ -4,7 +4,8 @@ $email_address = "user@domain.com";
 echo "Starting script...\n";
 
 echo "Checking x.com";
-while (file_get_contents("http://x.com") === "x") {
+$website_content = file_get_contents("http://x.com");
+while ($website_content === "x") {
   echo ".";
 
   sleep(60);
@@ -12,7 +13,8 @@ while (file_get_contents("http://x.com") === "x") {
 echo "\nx.com has changed!\n";
 
 echo "Alerting user...\n";
-mail($email_address, "x.com has changed!", "Please check the website now.");
+$email_message = "Please check the website now. It currently is:\n".$website_content;
+mail($email_address, "x.com has changed!", $email_message);
 
 echo "Killing script...\n";
 exit();
