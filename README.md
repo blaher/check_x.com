@@ -1,6 +1,7 @@
 How to Run
 ==========
 
-1. Install PHP
-2. In command line, change to the directory of this project.
-3. In command line, run 'php check.php'
+1. Install PHP.
+2. Edit the check.php file and change 'user@domain.com' to your email address.
+3. In command line, change to the directory of this project.
+4. In command line, run 'php check.php'.
